@@ -18,6 +18,7 @@ export const PetsList = ({ pets }) => {
       <section className="pets-list">
         {/* All cats section */}
         {cats.map((cat) => (
+          
           <Pet key={cat.id} kind="cat" pet={cat} />
         ))}
 
