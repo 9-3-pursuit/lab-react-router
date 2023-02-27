@@ -23,6 +23,7 @@ export const PetsList = ({ pets }) => {
         <Routes>
           <Route path="cats" element={<>{allCats}</>} />
           <Route path="dogs" element={<>{allDogs}</>} />
+          <Route path="/" element={<Navigate to="cats" />} />
         </Routes>
       </section>
     </section>
