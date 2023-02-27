@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link  } from 'react-router-dom';
 
 /*
   Components
@@ -27,14 +27,12 @@ function App() {
   return (
     <div className="wrapper">
       <Router>
-        <Nav />
-        <main>
+        <Nav Link={Link}/>
           <Routes>
             <Route path="/" element={<Home employees={employees} owners={owners} pets={pets} />} />
             <Route path="/staff" element={<StaffList employees={employees} />} />
             <Route path="/pets" element={<PetsList pets={pets} />} />
           </Routes>
-        </main>
         <Footer />
       </Router>
       {/* <Nav />
