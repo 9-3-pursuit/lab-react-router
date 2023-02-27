@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // * ^-- wraps your app in Router; will pass down all the router functionality to the components inside 
 // * routes -> defines the area that will display the views & wraps around the views we want to create
 /*
@@ -30,9 +30,15 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Home employees={employees} owners={owners} pets={pets} />
-          <StaffList employees={employees} />
-          <PetsList pets={pets} />
+<Route path="/" element={<Home employees={employees} owners={owners} pets={pets}/>} />
+<Route path="/staff" element={<StaffList employees={employees} />}/>
+<Route path="/pets" element={ <PetsList pets={pets} />}/>
+<Route path="/pets/:kind" element={<PetsList pets={pets}/>}/>
+
+
+         
+          
+         
         </Routes>
 
         <Footer />
