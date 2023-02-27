@@ -28,7 +28,7 @@ export const PetsList = ({ pets }) => {
         <Routes>
           <Route path="/cats"  element={catList}/>
           <Route path="/dogs"  element={dogList}/>
-          <Route path="/" element={<Navigate to="/pets/cats"/>}/>
+          <Route path="*" element={<Navigate to="/pets/cats"/>}/>
         </Routes>
       </section>
     </section>
