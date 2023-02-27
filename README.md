@@ -48,19 +48,19 @@ The general functionality of the page already exists. Unfortunately, the content
 
 You will need to add routing for the page. To complete this lab, you will need to create the following routes:
 
-- `/`: When going to the index, you should see the `Home` component, alongside the `Nav` and `Footer`.
-- `/staff`: When going to the Staff page route, you should see the `StaffList` component, alongside the `Nav` and `Footer`.
-- `/pets`: When going to the Pets page route, you should be redirected to `/pets/cats`.
-  - `/pets/cats`: When going to the Cats page route, you should see the `PetsList` component, alongside the `Nav` and `Footer`. You should only be shown cats.
-  - `/pets/dogs`: When going to the Dogs page route, you should see the `PetsList` component, alongside the `Nav` and `Footer`. You should only be shown dogs.
+- `/`: When going to the index, you should see the `Home` component, alongside the `Nav` and `Footer`. [✓]
+- `/staff`: When going to the Staff page route, you should see the `StaffList` component, alongside the `Nav` and `Footer`. [✓]
+- `/pets`: When going to the Pets page route, you should be redirected to `/pets/cats`.[✓]
+  - `/pets/cats`: When going to the Cats page route, you should see the `PetsList` component, alongside the `Nav` and `Footer`. You should only be shown cats.[✓]
+  - `/pets/dogs`: When going to the Dogs page route, you should see the `PetsList` component, alongside the `Nav` and `Footer`. You should only be shown dogs.[✓]
 
 Additionally, the following links and buttons should have some effects.
 
-- The `Nav` contains three links. Update the links so that they work with React router.
-  - `Northwest Animal Hospital` - should link to `/`
-  - `All Staff` - should link to `/staff`
-  - `All Pets` - should link to `/pets`
-- The `PetsList` contains two links: "See All Cats" and "See All Dogs". Clicking either link should send the person to the appropriate route and change the displayed list.
+- The `Nav` contains three links. Update the links so that they work with React router.[✓]
+  - `Northwest Animal Hospital` - should link to `/`[✓]
+  - `All Staff` - should link to `/staff`[✓]
+  - `All Pets` - should link to `/pets`[✓]
+- The `PetsList` contains two links: "See All Cats" and "See All Dogs". Clicking either link should send the person to the appropriate route and change the displayed list.[✓]
 
 By doing the above, all of the tests should pass as opposed to just a few.
 
