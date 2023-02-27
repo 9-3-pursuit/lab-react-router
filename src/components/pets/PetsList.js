@@ -22,8 +22,8 @@ import { useEffect } from "react";
 
 export const PetsList = ({ pets }) => {
 
-  let { kind } = useParams() // ->added in
-  let Navigate = useNavigate() // -> added in 
+  let { kind } = useParams() // * sets the return to the different kind of cats/dogs
+  let Navigate = useNavigate() // * sets navigate to the hook useNavigate() to w/rendered info from the page data
 
   const [cats, dogs] = pets.reduce(
     (acc, pet) => {
@@ -34,11 +34,17 @@ export const PetsList = ({ pets }) => {
     [[], []]
   );
 
+  //* this will change the rendered info according to the desired info clicked w/ useEffect()
   useEffect(() => {
     if (kind === undefined) {
       Navigate("/pets/cats")
     }
   })
+
+  // ! Wildcard route in react -> also known as nested routes in react
+  // ! Nested routing means routes inside another route
+  // ! has limitations if only these are used & that limits the nested child components when attempting to open
+  // ! it will only show or render the parent component page only. 
 
   return (
     <section className="pets-wrapper">
@@ -46,7 +52,10 @@ export const PetsList = ({ pets }) => {
       <section className="pets-list">
 
         {/* All cats section */}
-        {kind === 'cats' || kind === undefined ? //->added in
+        {kind === 'cats' || kind === undefined ?
+
+          // * if kind equals cats OR undefined then (w/  ternary operator ?) map through the cat data
+          // * null -> then return nothing b/c the info can not be found
           cats.map((cat) => (
             <Pet key={cat.id} kind="cat" pet={cat} />
           )) : null}
@@ -54,8 +63,11 @@ export const PetsList = ({ pets }) => {
 
 
 
+
         {/* All dogs section */}
-        {kind === 'dogs' || kind === undefined ? // -> added in
+        {kind === 'dogs' || kind === undefined ?
+          // * if kind equals dogs OR undefined then (w/  ternary operator ?) map through the dog data
+          // * null -> then return nothing b/c the info can not be found
           dogs.map((dog) => (
             <Pet key={dog.id} kind="dog" pet={dog} />
           )) : null}

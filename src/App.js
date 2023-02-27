@@ -29,16 +29,18 @@ function App() {
     <div className="wrapper">
       <Router>
         <Nav />
-        <Routes>
-<Route path="/" element={<Home employees={employees} owners={owners} pets={pets}/>} />
-<Route path="/staff" element={<StaffList employees={employees} />}/>
-<Route path="/pets" element={ <PetsList pets={pets} />}/>
-<Route path="/pets/:kind" element={<PetsList pets={pets}/>}/>
-
-
-         
+        <Routes> 
+        
+          {/* 
+          -> all below info was wrapped in its own route nested inside of Routes w/i Router.
+          -> Includes the following: <Home/>;<Staff/>;<Pets/>; <Pets/:kind/> 
           
-         
+          */}
+          
+          <Route path="/" element={<Home employees={employees} owners={owners} pets={pets} />} />
+          <Route path="/staff" element={<StaffList employees={employees} />} />
+          <Route path="/pets" element={<PetsList pets={pets} />} />
+          <Route path="/pets/:kind" element={<PetsList pets={pets} />} />
         </Routes>
 
         <Footer />
