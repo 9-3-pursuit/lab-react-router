@@ -1,3 +1,4 @@
+
 export const Staffer = ({ employee }) => {
   const { firstName, lastName, prefix, postfix, title } = employee;
   let name = `${firstName} ${lastName}`;
@@ -11,5 +12,4 @@ export const Staffer = ({ employee }) => {
     </article>
   );
 };
-
 export default Staffer;
