@@ -9,6 +9,8 @@ import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 /*
   Data
   ---------------
@@ -25,11 +27,19 @@ function App() {
 
   return (
     <div className="wrapper">
+      <BrowserRouter>
       <Nav />
+      {/* <Routes> */}
+        {/* <Route path="/" element={<Home />} />
+        <Route path="/staff" element={<StaffList />} />
+        <Route path="/pets" element={<PetsList />} /> */}
       <Home employees={employees} owners={owners} pets={pets} />
       <StaffList employees={employees} />
       <PetsList pets={pets} />
+ 
+      {/* </Routes> */}
       <Footer />
+      </BrowserRouter>
     </div>
   );
 }
