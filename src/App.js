@@ -34,8 +34,8 @@ function App() {
         <Route path="/staff" element={<StaffList />} />
         <Route path="/pets" element={<PetsList />} /> */}
       <Home employees={employees} owners={owners} pets={pets} />
-      <StaffList employees={employees} />
-      <PetsList pets={pets} />
+      {/* <StaffList employees={employees} />
+      <PetsList pets={pets} /> */}
  
       {/* </Routes> */}
       <Footer />
