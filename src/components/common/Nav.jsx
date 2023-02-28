@@ -1,3 +1,4 @@
+import { NavLink as Link } from "react-router-dom";
 import "./styles/Nav.css";
 
 function Nav() {
@@ -5,21 +6,25 @@ function Nav() {
     <header>
       <article>
         <h1>
-          <a href="/">
+          <Link to="/" activeClassName="active">
             Northwest <span>Animal Hospital</span>
-          </a>
+          </Link>
         </h1>
       </article>
-      <aside>
+      <nav>
         <ul>
           <li>
-            <a href="/staff">All Staff</a>
+            <Link to="/staff" activeClassName="active">
+              All Staff
+            </Link>
           </li>
           <li>
-            <a href="/pets">All Pets</a>
+            <Link to="/pets" activeClassName="active">
+              All Pets
+            </Link>
           </li>
         </ul>
-      </aside>
+      </nav>
     </header>
   );
 }
