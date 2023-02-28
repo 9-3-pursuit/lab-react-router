@@ -15,12 +15,12 @@ function Nav() {
         <ul>
           <li>
             <Link to="/staff">
-              <a href="/staff">All Staff</a>
+              All Staff
             </Link>
           </li>
           <li>
             <Link to="/pets">
-              <a href="/pets">All Pets</a>
+              All Pets
             </Link>
           </li>
         </ul>
