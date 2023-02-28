@@ -17,13 +17,11 @@ function Nav() {
         <ul>
           <li>
             {/* <a href="/staff">All Staff</a> */}
-            {/* <Link to={"/staff"}><a>All Staff</a></Link>   */}
             <Link to={"/staff"}>All Staff</Link>
             
           </li>
           <li>
             {/* <a href="/pets">All Pets</a> */}
-            {/* <Link to={"/pets"}><a>All Pets</a></Link> */} 
             <Link to={"/pets"}>All Pets</Link>
           </li>
         </ul>

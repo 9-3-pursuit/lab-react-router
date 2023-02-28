@@ -10,7 +10,6 @@ import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
- //import { Routes, Route, Navigate} from  "react-router-dom";
 
 /*
   Data
@@ -34,11 +33,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home employees={employees} owners={owners} pets={pets} />} />
           <Route path="/staff" element={<StaffList employees={employees} />} />
-          <Route path="/pets" element={<PetsList pets={pets} />} />
+          <Route path="/pets/*" element={<PetsList pets={pets} type={"cats and dogs"} />} />
       {/* <Home employees={employees} owners={owners} pets={pets} />
       <StaffList employees={employees} />
-      <PetsList pets={pets} />  */}
-    
+      <PetsList pets={pets} />  */}   
         </Routes>
       </Router>
     </div>
