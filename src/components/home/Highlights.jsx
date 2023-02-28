@@ -1,4 +1,4 @@
-import "./Highlights.css";
+import "./styles/Highlights.css";
 
 export const Highlights = ({ employees, owners, pets }) => {
   return (

@@ -1,10 +1,8 @@
 import Staffer from "./Staffer";
-import "./StaffList.css";
+import "./styles/StaffList.css";
 
 export const StaffList = ({ employees }) => {
-  const staff = employees.map((employee) => (
-    <Staffer key={employee.id} employee={employee} />
-  ));
+  const staff = employees.map((employee) => <Staffer key={employee.id} employee={employee} />);
 
   return (
     <section className="staff-list">

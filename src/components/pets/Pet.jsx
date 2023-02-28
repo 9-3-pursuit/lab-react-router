@@ -1,4 +1,4 @@
-import "./Pet.css";
+import "./styles/Pet.css";
 
 const iconMap = {
   cat: "🐈",
