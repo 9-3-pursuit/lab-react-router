@@ -28,11 +28,9 @@ function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
-        <Nav>
-          <Link to="/">Northwest Animal Hospital</Link>
-          <Link to="/staff">All Staff</Link>
-          <Link to="/pets">All Pets</Link>
-        </Nav>
+        <Nav/>
+          
+        
         <Routes>
           <Route path="/" element={<Home employees={employees} owners={owners} pets={pets} />} />
           <Route path="/staff" element={<StaffList employees={employees} />} />
