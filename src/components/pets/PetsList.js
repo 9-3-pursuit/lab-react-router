@@ -1,33 +1,27 @@
-import PetsListNav from "./PetsListNav";
-import Pet from "./Pet";
-import "./PetsList.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import petsData from '../data/pets';
 
-export const PetsList = ({ pets }) => {
-  const [cats, dogs] = pets.reduce(
-    (acc, pet) => {
-      const position = pet.kind === "Cat" ? 0 : 1;
-      acc[position].push(pet);
-      return acc;
-    },
-    [[], []]
-  );
+function PetsList(props) {
+  const animal = props.animal;
+  const pets = petsData.filter(pet => pet.type === animal);
 
   return (
-    <section className="pets-wrapper">
-      <PetsListNav cats={cats} dogs={dogs} />
-      <section className="pets-list">
-        {/* All cats section */}
-        {cats.map((cat) => (
-          <Pet key={cat.id} kind="cat" pet={cat} />
+    <div>
+      <h1>{`${animal}s`}</h1>
+      <ul className="pets-list">
+        {pets.map(pet => (
+          <li key={pet.id}>
+            <h3>{pet.name}</h3>
+            <p>{pet.breed}</p>
+          </li>
         ))}
-
-        {/* All dogs section */}
-        {dogs.map((dog) => (
-          <Pet key={dog.id} kind="dog" pet={dog} />
-        ))}
-      </section>
-    </section>
+      </ul>
+      <Link to={`/pets/${animal === 'cat' ? 'dogs' : 'cats'}`}>
+        <button>See All {animal === 'cat' ? 'Dogs' : 'Cats'}</button>
+      </Link>
+    </div>
   );
-};
+}
 
 export default PetsList;

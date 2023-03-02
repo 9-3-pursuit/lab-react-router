@@ -1,17 +1,11 @@
-import Highlights from "./Highlights";
-import NewsletterForm from "./NewsletterForm";
-import splashImage from "./andrew-s-unsplash.jpg";
-import "./Home.css";
+import React from 'react';
 
-export const Home = ({ employees, owners, pets }) => {
+const Home = () => {
   return (
-    <main>
-      <section className="splash-image">
-        <img src={splashImage} alt="Splash." />
-        <Highlights employees={employees} owners={owners} pets={pets} />
-        <NewsletterForm />
-      </section>
-    </main>
+    <div>
+      <h1>Welcome to Northwest Animal Hospital!</h1>
+      <p>We provide high-quality veterinary care to pets in the Seattle area.</p>
+    </div>
   );
 };
 
