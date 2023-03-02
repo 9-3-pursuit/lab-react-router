@@ -1,17 +1,30 @@
-import Staffer from "./Staffer";
-import "./StaffList.css";
+import React from 'react';
+import staffData from '../data/staff';
 
-export const StaffList = ({ employees }) => {
-  const staff = employees.map((employee) => (
-    <Staffer key={employee.id} employee={employee} />
-  ));
+function StaffList() {
+  const staff = staffData.map(person => {
+    let name = '';
+    if (person.prefix) {
+      name += `${person.prefix} `;
+    }
+    name += `${person.name}`;
+    if (person.postfix) {
+      name += `, ${person.postfix}`;
+    }
+    return (
+      <li key={person.id}>
+        <h3>{name}</h3>
+        <p>{person.position}</p>
+      </li>
+    );
+  });
 
   return (
-    <section className="staff-list">
-      <h2>Our Staff</h2>
-      <div className="staffers">{staff}</div>
-    </section>
+    <div>
+      <h1>All Staff</h1>
+      <ul className="staff-list">{staff}</ul>
+    </div>
   );
-};
+}
 
 export default StaffList;
