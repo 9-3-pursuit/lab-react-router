@@ -1,5 +1,6 @@
 export const Staffer = ({ employee }) => {
   const { firstName, lastName, prefix, postfix, title } = employee;
+ 
   let name = `${firstName} ${lastName}`;
   if (prefix) name = `${prefix} ${name}`;
   if (postfix) name = `${name}, ${postfix}`;
