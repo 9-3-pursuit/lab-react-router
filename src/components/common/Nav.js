@@ -1,22 +1,30 @@
+import { Link } from "react-router-dom";
+import PetsList from "../pets/PetsList";
 import "./Nav.css";
+
 
 function Nav() {
   return (
     <header>
       <article>
+        <Link to="/">
         <h1>
-          <a href="/">
             Northwest <span>Animal Hospital</span>
-          </a>
         </h1>
+        </Link>
       </article>
       <aside>
         <ul>
           <li>
-            <a href="/staff">All Staff</a>
+          <Link to="/staff">
+            <h3>All Staff</h3>
+          </Link>
           </li>
           <li>
-            <a href="/pets">All Pets</a>
+          <Link to="/pets">
+            <h3>All Pets</h3>
+           
+          </Link>
           </li>
         </ul>
       </aside>
@@ -24,4 +32,9 @@ function Nav() {
   );
 }
 
+          
+
 export default Nav;
+          
+          
+          
