@@ -8,10 +8,7 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,Navigate,} from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 /*
   Data
   ---------------
